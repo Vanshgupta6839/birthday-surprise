@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -15,12 +16,13 @@ font-family:'Segoe UI',sans-serif;
 }
 
 body{
-height:100vh;
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 background:linear-gradient(135deg,#ff4d8d,#ff758c,#ff9a9e);
 padding:20px;
+overflow-y:auto;
 }
 
 .container{
@@ -103,32 +105,37 @@ cursor:pointer;
 background:#ffb6cc;
 }
 
-.enter-btn{
-margin-top:20px;
-padding:12px 30px;
-border:none;
-border-radius:30px;
-background:#ff4d8d;
-color:white;
-font-size:18px;
-cursor:pointer;
-}
-
 #error{
 margin-top:15px;
 color:red;
+font-weight:bold;
 }
 
 @media(max-width:768px){
+
+body{
+padding:15px;
+}
+
+.container{
+padding:15px;
+}
 
 .photo-box img{
 width:220px;
 height:280px;
 }
 
+.key{
+width:60px;
+height:60px;
+font-size:20px;
+}
+
 }
 
 </style>
+
 </head>
 <body>
 
@@ -137,6 +144,7 @@ height:280px;
 <div class="photo-box">
 
 <img src="image/photo5.jpg" alt="Birthday Photo">
+
 <h2>Happy Birthday Darling ❤️</h2>
 
 </div>
@@ -154,21 +162,13 @@ height:280px;
 
 <div class="keypad">
 
-<button class="key" onclick="addNum('1')">1</button>
-<button class="key" onclick="addNum('2')">2</button>
-<button class="key" onclick="addNum('3')">3</button>
+<button class="key" onclick="addNum('1')">1</button> <button class="key" onclick="addNum('2')">2</button> <button class="key" onclick="addNum('3')">3</button>
 
-<button class="key" onclick="addNum('4')">4</button>
-<button class="key" onclick="addNum('5')">5</button>
-<button class="key" onclick="addNum('6')">6</button>
+<button class="key" onclick="addNum('4')">4</button> <button class="key" onclick="addNum('5')">5</button> <button class="key" onclick="addNum('6')">6</button>
 
-<button class="key" onclick="addNum('7')">7</button>
-<button class="key" onclick="addNum('8')">8</button>
-<button class="key" onclick="addNum('9')">9</button>
+<button class="key" onclick="addNum('7')">7</button> <button class="key" onclick="addNum('8')">8</button> <button class="key" onclick="addNum('9')">9</button>
 
-<button class="key" onclick="clearPin()">⌫</button>
-<button class="key" onclick="addNum('0')">0</button>
-<button class="key" onclick="checkPin()">✓</button>
+<button class="key" onclick="clearPin()">⌫</button> <button class="key" onclick="addNum('0')">0</button> <button class="key" onclick="checkPin()">✓</button>
 
 </div>
 
@@ -216,8 +216,8 @@ window.location.href="gift.html";
 
 }else{
 
-document.getElementById("error")
-.innerHTML="❌ Wrong Passcode";
+document.getElementById("error").innerHTML=
+"❌ Wrong Passcode";
 
 clearPin();
 
