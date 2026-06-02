@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Letter For Darling ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:30px;
+overflow:hidden;
+}
+
+.card{
+max-width:850px;
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(15px);
+padding:40px;
+border-radius:25px;
+box-shadow:0 0 30px rgba(255,255,255,.1);
+}
+
+h1{
+text-align:center;
+margin-bottom:25px;
+color:#ff8ed2;
+}
+
+#text{
+font-size:1.2rem;
+line-height:1.9;
+white-space:pre-wrap;
+}
+
+button{
+margin-top:30px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:#ff4da6;
+color:white;
+font-size:18px;
+cursor:pointer;
+display:block;
+margin-left:auto;
+margin-right:auto;
+}
+
+.hearts{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+}
+
+.heart{
+position:absolute;
+font-size:20px;
+animation:float 8s linear infinite;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<div class="card">
+
+<h1>❤️ A Letter For Darling ❤️</h1>
+
+<div id="text"></div>
+
+<button onclick="nextPage()">
+Final Surprise 🎆
+</button>
+
+</div>
+
+<script>
+
+const message = `
+
+Happy Wala Birthday Darling ❤️
+
+Tu sirf dost nahi,
+dil ka sukoon hai. 🫂
+
+Hamare beech ladai hui,
+baat band hui,
+lekin dosti kabhi kam nahi hui.
+
+Main bas itna chahta hu ki
+tu mujhe daant le,
+maar le,
+gussa kar le,
+
+par hamari dosti kabhi khatam na ho.
+
+Farewell ho gaya,
+school khatam ho gaya,
+waqt badal gaya,
+
+lekin meri nazar me
+tu aaj bhi wahi special dost hai. ❤️
+
+Thank You For Every Smile,
+Every Laugh,
+Every Memory.
+
+Thank You For Being The Bestest Friend Forever ❤️
+
+`;
+
+let i = 0;
+
+function typeWriter(){
+
+if(i < message.length){
+
+document.getElementById("text").innerHTML += message.charAt(i);
+
+i++;
+
+setTimeout(typeWriter,35);
+
+}
+
+}
+
+typeWriter();
+
+function nextPage(){
+
+window.location.href="final.html";
+
+}
+
+const hearts=document.getElementById("hearts");
+
+setInterval(()=>{
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"%";
+
+heart.style.fontSize=(Math.random()*20+15)+"px";
+
+hearts.appendChild(heart);
+
+setTimeout(()=>heart.remove(),8000);
+
+},500);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Memory ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+overflow:hidden;
+}
+
+.container{
+width:90%;
+max-width:1000px;
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:center;
+gap:40px;
+}
+
+img{
+width:350px;
+height:450px;
+object-fit:cover;
+border-radius:25px;
+box-shadow:0 0 30px rgba(255,255,255,.2);
+transition:.4s;
+}
+
+img:hover{
+transform:scale(1.05);
+}
+
+.text{
+max-width:450px;
+}
+
+h1{
+font-size:3rem;
+margin-bottom:20px;
+color:#ff8ed2;
+}
+
+p{
+font-size:1.2rem;
+line-height:1.8;
+}
+
+button{
+margin-top:30px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:#ff4da6;
+color:white;
+font-size:18px;
+cursor:pointer;
+box-shadow:0 0 20px #ff4da6;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="image/photo1.jpg" alt="Memory">
+
+<div class="text">
+
+<h1>❤️ A Beautiful Memory</h1>
+
+<p>
+Some people become memories...
+
+But you became a part of life. 🫂❤️
+
+Thank you for every smile,
+every laugh,
+and every moment that became special because of you.
+</p>
+
+<button onclick="nextPage()">
+Next Memory →
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function nextPage(){
+
+window.location.href="memory2.html";
+
+}
+
+</script>
+
+</body>
+</html>

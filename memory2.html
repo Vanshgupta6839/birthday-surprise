@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farewell Memory ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#141E30,#243B55);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+overflow:hidden;
+}
+
+.container{
+width:90%;
+max-width:1000px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+gap:40px;
+}
+
+img{
+width:350px;
+height:450px;
+object-fit:cover;
+border-radius:25px;
+box-shadow:0 0 30px rgba(255,255,255,.2);
+}
+
+.text{
+max-width:450px;
+}
+
+h1{
+font-size:3rem;
+margin-bottom:20px;
+color:#ffd369;
+}
+
+p{
+font-size:1.2rem;
+line-height:1.8;
+}
+
+button{
+margin-top:30px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:#ff4da6;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="image/photo2.jpg" alt="Farewell">
+
+<div class="text">
+
+<h1>🎓 Farewell Day</h1>
+
+<p>
+Farewell may have ended our school days...
+
+But it never ended our friendship. ❤️
+
+That day became a memory,
+but our bond became stronger.
+
+Some goodbyes are not endings,
+they are just the beginning of beautiful memories. 🫂✨
+</p>
+
+<button onclick="nextPage()">
+Next Memory →
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function nextPage(){
+window.location.href="memory3.html";
+}
+
+</script>
+
+</body>
+</html>

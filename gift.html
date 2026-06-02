@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Gift ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+overflow:hidden;
+color:white;
+}
+
+h1{
+margin-bottom:40px;
+text-align:center;
+}
+
+.gift{
+position:relative;
+width:220px;
+height:220px;
+cursor:pointer;
+transition:1s;
+}
+
+.box{
+position:absolute;
+bottom:0;
+width:220px;
+height:150px;
+background:#ff4da6;
+border-radius:10px;
+}
+
+.lid{
+position:absolute;
+top:40px;
+width:220px;
+height:50px;
+background:#ff7ac6;
+border-radius:10px;
+transition:1s;
+transform-origin:left;
+}
+
+.ribbon-v{
+position:absolute;
+left:95px;
+width:30px;
+height:220px;
+background:white;
+}
+
+.ribbon-h{
+position:absolute;
+top:95px;
+width:220px;
+height:30px;
+background:white;
+}
+
+.open .lid{
+transform:rotate(-45deg) translateY(-100px);
+}
+
+.message{
+margin-top:50px;
+font-size:1.4rem;
+opacity:0;
+transition:1s;
+text-align:center;
+}
+
+.show{
+opacity:1;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>🎁 A Special Gift For Darling ❤️</h1>
+
+<div class="gift" id="gift">
+
+<div class="lid"></div>
+
+<div class="box"></div>
+
+<div class="ribbon-v"></div>
+
+<div class="ribbon-h"></div>
+
+</div>
+
+<div class="message" id="message">
+✨ Click Again To Continue ✨
+</div>
+
+<script>
+
+let opened=false;
+
+document.getElementById("gift").onclick=function(){
+
+if(!opened){
+
+this.classList.add("open");
+
+document.getElementById("message")
+.classList.add("show");
+
+opened=true;
+
+}else{
+
+window.location.href="birthday.html";
+
+}
+
+};
+
+</script>
+
+</body>
+</html>
