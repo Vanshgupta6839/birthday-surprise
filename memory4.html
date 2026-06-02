@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -16,12 +17,13 @@ font-family:'Segoe UI',sans-serif;
 
 body{
 background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-height:100vh;
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 color:white;
-overflow:hidden;
+overflow-y:auto;
+padding:20px;
 }
 
 .container{
@@ -34,6 +36,134 @@ align-items:center;
 gap:40px;
 }
 
+img{
+width:350px;
+height:450px;
+object-fit:cover;
+border-radius:25px;
+border:6px solid white;
+box-shadow:0 0 30px rgba(255,255,255,.25);
+}
+
+.text{
+max-width:450px;
+text-align:center;
+}
+
+h1{
+font-size:3rem;
+margin-bottom:20px;
+color:#ff9fd6;
+}
+
+p{
+font-size:1.2rem;
+line-height:1.9;
+}
+
+button{
+margin-top:35px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:#ff4da6;
+color:white;
+font-size:18px;
+cursor:pointer;
+box-shadow:0 0 20px #ff4da6;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+@media(max-width:768px){
+
+img{
+width:250px;
+height:320px;
+}
+
+h1{
+font-size:2rem;
+}
+
+p{
+font-size:1rem;
+line-height:1.8;
+}
+
+button{
+width:90%;
+max-width:280px;
+margin-bottom:50px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="image/photo4.jpg" alt="Last Memory">
+
+<div class="text">
+
+<h1>❤️ One Last Memory</h1>
+
+<p>
+
+Zindagi hamesha ek jaisi nahi rehti...
+
+<br><br>
+
+Log badalte hain,
+waqt badalta hai,
+halat badalte hain.
+
+<br><br>
+
+Lekin kuch log dil me
+hamesha same rehte hain. 🫂
+
+<br><br>
+
+Aur tum unhi logon me se ho.
+
+<br><br>
+
+No matter what happens,
+
+<br><br>
+
+You will always be special. ❤️✨
+
+</p>
+
+<button onclick="nextPage()">
+Read My Letter ❤️
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function nextPage(){
+
+window.location.href="letter.html";
+
+}
+
+</script>
+
+</body>
+</html>
 img{
 width:350px;
 height:450px;
